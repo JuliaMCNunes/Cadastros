@@ -1,0 +1,7 @@
+{
+  "name": "Cadastros",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
