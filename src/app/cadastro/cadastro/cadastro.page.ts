@@ -23,9 +23,9 @@ export class CadastroPage implements OnInit {
 
   ngOnInit() {
     this.clienteForm = this.cadastroBuilder.group({
-      nome: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(40)])],
-      cpf: ['', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11)])],
-      tele: ['', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11)])]
+      nome: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(40), Validators.pattern('[a-zA-Z ""]*')])],
+      cpf: ['', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11), Validators.pattern('[0-9]*')])],
+      tele: ['', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11), Validators.pattern('[0-9]*')])]
     })
   }
 
