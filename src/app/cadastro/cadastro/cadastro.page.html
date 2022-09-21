@@ -9,22 +9,22 @@
     <ion-item>
       <ion-label position="floating">Nome:</ion-label>
       <br>
-      <small *ngIf="(clienteForm.get('nome').errors?.required || clienteForm.get('nome').errors?.minlength || clienteForm.get('nome').errors?.maxlength) && veri.submitted">Informe um nome válido de 3 a 40 caracteres.</small>
+      <small *ngIf="(clienteForm.get('nome').errors?.required || clienteForm.get('nome').errors?.minlength || clienteForm.get('nome').errors?.maxlength) && veri.submitted">Informe um nome de 3 a 40 caracteres.</small>
       <ion-input [(ngModel)]="cliente.nome" formControlName="nome" type="text"></ion-input>
     </ion-item>
     
     <ion-item>
       <ion-label position="floating">CPF:</ion-label>
       <br>
-      <small *ngIf="(clienteForm.get('cpf').errors?.required || clienteForm.get('cpf').errors?.minlength || clienteForm.get('cpf').errors?.maxlength || clienteForm.get('cpf').errors?.pattern) && veri.submitted">Insira apenas números.</small>
-      <ion-input [(ngModel)]="cliente.cpf" formControlName="cpf" type="numeric"></ion-input>
+      <small *ngIf="(clienteForm.get('cpf').errors?.required || clienteForm.get('cpf').errors?.minlength || clienteForm.get('cpf').errors?.maxlength || clienteForm.get('cpf').errors?.pattern) && veri.submitted">Insira um CPF válido.</small>
+      <ion-input [(ngModel)]="cliente.cpf" formControlName="cpf" type="text" simpleMask="999.999.999-99"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Telefone:</ion-label>
       <br>
       <small *ngIf="(clienteForm.get('tele').errors?.required || clienteForm.get('tele').errors?.minlength || clienteForm.get('tele').errors?.maxlength || clienteForm.get('tele').errors?.pattern) && veri.submitted">Insira um telefone válido.</small>
-      <ion-input [(ngModel)]="cliente.tele" formControlName="tele" type="numeric"></ion-input>
+      <ion-input [(ngModel)]="cliente.tele" formControlName="tele" type="text" simpleMask="(000) 0 0000-0000"></ion-input>
     </ion-item>
 
     <ion-button type="submit">Cadastrar</ion-button>

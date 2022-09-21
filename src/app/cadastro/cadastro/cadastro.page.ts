@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro',
@@ -24,9 +24,8 @@ export class CadastroPage implements OnInit {
   ngOnInit() {
     this.clienteForm = this.cadastroBuilder.group({
       nome: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(40), Validators.pattern('[a-zA-Z ""]*')])],
-      cpf: ['', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11), Validators.pattern('[0-9]*')])],
-      tele: ['', Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11), Validators.pattern('[0-9]*')])]
+      cpf: ['', Validators.compose([Validators.required, Validators.minLength(14), Validators.maxLength(14)])],
+      tele: ['', Validators.compose([Validators.required, Validators.minLength(17), Validators.maxLength(17)])]
     })
   }
-
 }

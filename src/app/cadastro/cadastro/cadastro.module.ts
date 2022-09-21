@@ -8,13 +8,16 @@ import { CadastroPageRoutingModule } from './cadastro-routing.module';
 
 import { CadastroPage } from './cadastro.page';
 
+import { SimpleMaskModule } from 'ngx-ion-simple-mask';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     CadastroPageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SimpleMaskModule
   ],
   declarations: [CadastroPage]
 })
