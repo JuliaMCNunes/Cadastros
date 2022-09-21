@@ -24,7 +24,7 @@
       <ion-label position="floating">Telefone:</ion-label>
       <br>
       <small *ngIf="(clienteForm.get('tele').errors?.required || clienteForm.get('tele').errors?.minlength || clienteForm.get('tele').errors?.maxlength || clienteForm.get('tele').errors?.pattern) && veri.submitted">Insira um telefone válido.</small>
-      <ion-input [(ngModel)]="cliente.tele" formControlName="tele" type="text" simpleMask="(000) 0 0000-0000"></ion-input>
+      <ion-input [(ngModel)]="cliente.tele" formControlName="tele" type="text" simpleMask="(999) 9 9999-9999"></ion-input>
     </ion-item>
 
     <ion-button type="submit">Cadastrar</ion-button>
